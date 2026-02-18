@@ -6,7 +6,7 @@ import { AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, RouterLinkActive, AsyncPipe],
+  imports: [ AsyncPipe],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -17,5 +17,5 @@ export class HomeComponent {
     this.series$ = this.seriesService.getAll();
   }
 
-  
+
 }

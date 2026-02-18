@@ -38,7 +38,7 @@ export class NewComponent {
     this.serieService.create(payload).subscribe({
       next: (created) =>{
         this.responseId.set(created.id);
-        this.router.navigate(['/home', created.id ?? 1 ]),
+        this.router.navigate(['/', created.id ?? 1 ]),
         setTimeout(() => {
           this.router.navigate(['/home']);
         }, 2000);
