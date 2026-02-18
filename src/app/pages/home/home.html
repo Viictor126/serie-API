@@ -1,1 +1,16 @@
-<p>home works!</p>
+<h1>Todas las series</h1>
+<main>
+    <section>
+        <ul>
+            @for (serie of series$ | async; track serie.id) {
+                <li>
+                    <h2>{{ serie.title }}</h2>
+                    <p>{{ serie.channel }}</p>
+                    <p>{{ serie.rating }}</p>
+                </li>
+            } @empty {
+                <li>No hay posts</li>
+            }
+        </ul>
+    </section>
+</main>

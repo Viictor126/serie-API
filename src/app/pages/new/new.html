@@ -1,1 +1,26 @@
-<p>new works!</p>
+<h1>Añadir Serie</h1>
+<a routerLink="/home" class="link">← Volver</a>
+
+@if (responseId()) {
+    ¡Éxito! Serie registrada con el <strong>ID: {{ responseId() }}</strong>. 
+    Regresando al listado...
+}
+
+<form class="form" [formGroup]="form" (ngSubmit)="save()">
+    <label>
+        Title: 
+        <input type="text" formControlName="title" required>
+    </label>
+
+    <label>
+        Channel: 
+        <input type="text" formControlName="channel" required>
+    </label>
+
+    <label>
+        Rating 
+        <input type="number" formControlName="rating" required>
+    </label>
+
+    <button class="btn" type="submit">Submit Serie</button>
+</form>
